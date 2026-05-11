@@ -419,7 +419,8 @@ print("SDNN:", np.std(rr_lectura), "s")
 <h1 align="center"><i><b>𝐏𝐚𝐫𝐭𝐞 C 𝐝𝐞𝐥 𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐢𝐨</b></i></h1>
 
  **Construcción del diagrama de Poincaré**
- por ulimo ya teniendo los intervalos R-R se puede realizar el diagrama de poincaré tanto para la condición de reposo como para la condición de actividad (lectura). Cada punto del gráfico representa la relación entre dos intervalos cardíacos consecutivos.
+ 
+Por ulimo ya teniendo los intervalos R-R se puede realizar el diagrama de poincaré tanto para la condición de reposo como para la condición de actividad (lectura). Cada punto del gráfico representa la relación entre dos intervalos cardíacos consecutivos.
  
  **Resultado del diagrama de poincaré en reposo**
  <img width="553" height="548" alt="image" src="https://github.com/user-attachments/assets/31f6bb09-59c1-4e4a-848b-2d709093096b" />
