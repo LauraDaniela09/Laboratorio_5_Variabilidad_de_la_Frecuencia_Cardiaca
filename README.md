@@ -416,6 +416,8 @@ print("SDNN:", np.std(rr_lectura), "s")
 <img width="1235" height="393" alt="image" src="https://github.com/user-attachments/assets/d80b81e5-d083-47da-979d-3ea731e67616" />
 <img width="386" height="204" alt="image" src="https://github.com/user-attachments/assets/88b335b1-cdc1-417b-9287-f93c0b834e1a" />
 
+La media de los intervalos R-R representa el tiempo promedio entre latidos cardíacos consecutivos, mientras que el parámetro SDNN corresponde a la desviación estándar de dichos intervalos y se utiliza como indicador de la variabilidad de la frecuencia cardíaca. Estos parámetros permiten evaluar la actividad del sistema nervioso autónomo bajo diferentes condiciones fisiológicas.
+
 <h1 align="center"><i><b>𝐏𝐚𝐫𝐭𝐞 C 𝐝𝐞𝐥 𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐢𝐨</b></i></h1>
 
  **Construcción del diagrama de Poincaré**
