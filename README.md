@@ -355,6 +355,10 @@ plt.grid()
 
 plt.show()
 ```
+A partir de la detección de los picos R se calcularon los intervalos R-R consecutivos, generando una nueva serie temporal correspondiente a la variabilidad de la frecuencia cardíaca (HRV). Esta señal permite analizar las fluctuaciones del ritmo cardíaco bajo diferentes condiciones fisiológicas.
+
+<img width="1242" height="393" alt="image" src="https://github.com/user-attachments/assets/2e2fab8c-caab-455f-9597-fb3b2942467a" />
+
 **PICOS R EN ACTIVIDAD**
 
 <img width="1258" height="393" alt="image" src="https://github.com/user-attachments/assets/dcc47b94-96bb-4fe2-a387-c6319f65fba1" />
@@ -409,4 +413,5 @@ print("Media RR:", np.mean(rr_lectura), "s")
 
 print("SDNN:", np.std(rr_lectura), "s")
 ```
+<img width="1235" height="393" alt="image" src="https://github.com/user-attachments/assets/d80b81e5-d083-47da-979d-3ea731e67616" />
 <img width="386" height="204" alt="image" src="https://github.com/user-attachments/assets/88b335b1-cdc1-417b-9287-f93c0b834e1a" />
