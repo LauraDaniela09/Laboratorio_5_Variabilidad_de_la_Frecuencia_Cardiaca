@@ -308,9 +308,10 @@ plt.grid()
 
 plt.show()
 ```
-luego se identificar los picos R en cada uno de los segmentos, calcular los intervalos R-R y obtener una nueva señal con dicha información. 
+luego se identificar los picos R en cada uno de los segmentos, calcular los intervalos R-R y obtener una nueva señal con dicha información.
 
-en la primera parte esta en reposo 
+  **PICOS R EN REPOSO**
+
 <img width="1258" height="394" alt="image" src="https://github.com/user-attachments/assets/29eb5ac8-21b5-4edf-9847-848e74e0de7e" />
 
 ```python
@@ -354,7 +355,8 @@ plt.grid()
 
 plt.show()
 ```
-en esta parte se encuentrac la señal con actividad 
+**PICOS R EN ACTIVIDAD**
+
 <img width="1258" height="393" alt="image" src="https://github.com/user-attachments/assets/dcc47b94-96bb-4fe2-a387-c6319f65fba1" />
 
 
