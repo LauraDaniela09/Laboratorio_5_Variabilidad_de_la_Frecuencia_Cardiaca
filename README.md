@@ -308,4 +308,103 @@ plt.grid()
 
 plt.show()
 ```
+luego se identificar los picos R en cada uno de los segmentos, calcular los intervalos R-R y obtener una nueva señal con dicha información. 
 
+en la primera parte esta en reposo 
+<img width="1258" height="394" alt="image" src="https://github.com/user-attachments/assets/29eb5ac8-21b5-4edf-9847-848e74e0de7e" />
+
+```python
+DETECCIÓN DE PICOS R
+# =========================================================
+
+picos_reposo, _ = find_peaks(
+    reposo,
+    distance=Fs*0.5,
+    prominence=0.1
+)
+
+picos_lectura, _ = find_peaks(
+    lectura,
+    distance=Fs*0.5,
+    prominence=0.1
+)
+
+# =========================================================
+# PICOS R - REPOSO
+# =========================================================
+
+plt.figure(figsize=(15,4))
+
+plt.plot(t_reposo,
+         reposo,
+         color='#B57EDC')
+
+plt.plot(picos_reposo/Fs,
+         reposo[picos_reposo],
+         "o",
+         color='#6A0DAD',
+         markersize=6)
+
+plt.title("Detección de Picos R - Reposo")
+
+plt.xlabel("Tiempo [s]")
+plt.ylabel("Amplitud [mV]")
+
+plt.grid()
+
+plt.show()
+```
+en esta parte se encuentrac la señal con actividad 
+<img width="1258" height="393" alt="image" src="https://github.com/user-attachments/assets/dcc47b94-96bb-4fe2-a387-c6319f65fba1" />
+
+
+```python
+PICOS R - LECTURA
+# =========================================================
+
+plt.figure(figsize=(15,4))
+
+plt.plot(t_lectura,
+         lectura,
+         color='#B57EDC')
+
+plt.plot(picos_lectura/Fs,
+         lectura[picos_lectura],
+         "o",
+         color='#6A0DAD',
+         markersize=6)
+
+plt.title("Detección de Picos R - Lectura")
+
+plt.xlabel("Tiempo [s]")
+plt.ylabel("Amplitud [mV]")
+
+plt.grid()
+
+plt.show()
+
+# =========================================================
+# INTERVALOS RR
+# =========================================================
+
+rr_reposo = np.diff(picos_reposo)/Fs
+
+rr_lectura = np.diff(picos_lectura)/Fs
+
+# =========================================================
+# HRV
+# =========================================================
+
+print("========== REPOSO ==========")
+
+print("Media RR:", np.mean(rr_reposo), "s")
+
+print("SDNN:", np.std(rr_reposo), "s")
+
+print("\n========== LECTURA ==========")
+
+print("Media RR:", np.mean(rr_lectura), "s")
+
+print("SDNN:", np.std(rr_lectura), "s")
+```
+<img width="386" height="204" alt="image" src="https://github.com/user-attachments/assets/88b335b1-cdc1-417b-9287-f93c0b834e1a" />
