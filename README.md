@@ -415,3 +415,79 @@ print("SDNN:", np.std(rr_lectura), "s")
 ```
 <img width="1235" height="393" alt="image" src="https://github.com/user-attachments/assets/d80b81e5-d083-47da-979d-3ea731e67616" />
 <img width="386" height="204" alt="image" src="https://github.com/user-attachments/assets/88b335b1-cdc1-417b-9287-f93c0b834e1a" />
+
+<h1 align="center"><i><b>𝐏𝐚𝐫𝐭𝐞 C 𝐝𝐞𝐥 𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐢𝐨</b></i></h1>
+
+ **Construcción del diagrama de Poincaré**
+ por ulimo ya teniendo los intervalos R-R se puede realizar el diagrama de poincaré tanto para la condición de reposo como para la condición de actividad (lectura). Cada punto del gráfico representa la relación entre dos intervalos cardíacos consecutivos.
+ 
+ **Resultado del diagrama de poincaré en reposo**
+ <img width="553" height="548" alt="image" src="https://github.com/user-attachments/assets/31f6bb09-59c1-4e4a-848b-2d709093096b" />
+
+```python
+plt.figure(figsize=(6,6))
+
+plt.scatter(rr_reposo[:-1],
+            rr_reposo[1:],
+            color='#B57EDC')
+
+plt.xlabel("RR(n) [s]")
+plt.ylabel("RR(n+1) [s]")
+
+plt.title("Diagrama de Poincaré - Reposo")
+
+plt.grid()
+
+plt.axis('equal')
+
+plt.show()
+```
+En el estado de reposo, los puntos del diagrama tienden a concentrarse más cerca de la diagonal principal, indicando una mayor estabilidad en el ritmo cardíaco.
+
+**Resultado del diagrama de poincaré en actividad**
+<img width="536" height="548" alt="image" src="https://github.com/user-attachments/assets/5e7d54e1-9d8d-433a-b05c-ca29a99a73f9" />
+
+```python
+plt.figure(figsize=(6,6))
+
+plt.scatter(rr_lectura[:-1],
+            rr_lectura[1:],
+            color='#B57EDC')
+
+plt.xlabel("RR(n) [s]")
+plt.ylabel("RR(n+1) [s]")
+
+plt.title("Diagrama de Poincaré - Lectura")
+
+plt.grid()
+
+plt.axis('equal')
+
+plt.show()
+```
+Durante la actividad se observó una dispersión diferente de los puntos, reflejando cambios en la variabilidad cardíaca asociados a la activación del sistema nervioso autónomo.
+
+<h1 align="center"><i><b>Bibliografia</b></i></h1>
+[1]Researchgate.net.de https://www.researchgate.net/figure/Figura-173-Los-sistemas-simpatico-y-parasimpatico_fig2_313160220
+
+[2]Sistema nervioso simpático. (2023, 30 octubre). Kenhub. https://www.kenhub.com/es/library/anatomia-es/sistema-nervioso-simpatico
+
+[3]Sistema nervioso parasimpático. (2023, 30 octubre). Kenhub. https://www.kenhub.com/es/library/anatomia-es/sistema-nervioso-parasimpatico
+
+[4]Fishman, M., Jacono, F. J., Park, S., Jamasebi, R., Thungtong, A., Loparo, K. A., & Dick, T. E. (2012). A method for analyzing temporal patterns of variability of a time series from Poincaré plots. Journal Of Applied Physiology, 113(2), 297-306. https://doi.org/10.1152/japplphysiol.01377.2010
+
+[5]Researchgate.net.de https://www.researchgate.net/figure/Figura-95-Diagramas-de-Poincare-y-parametros-tipicos-calculados-a-partir-de-la-senal-ECG_fig18_39569851
+
+[6]Hrv_Admin. (s. f.). Understanding the Poincaré plot – HRV Health. https://hrvhealth.org/blog/?p=124
+
+[7] CH González Obregón Upc.edu.(2002), de https://upcommons.upc.edu/server/api/core/bitstreams/eafd6950-b60c-462d-8eeb-1c6e1ee97891/content
+
+[8]Researchgate.net.de https://www.researchgate.net/figure/Figura-94-Diagrama-de-Poincare-de-una-serie-RR_fig17_39569851
+
+[9]Academia FibriCheck(2023) de https://academy.fibricheck.com/hc/en-be/articles/9020344305564-Chapter-8-Differentiating-regular-and-irregular-PPG-recordings
+
+[10]Malik, M., et al. (1996). Heart rate variability: Standards of measurement, physiological interpretation, and clinical use. Circulation, 93(5), 1043–1065.
+
+[11]Shaffer, F., & Ginsberg, J. P. (2017). An overview of heart rate variability metrics and norms. Frontiers in Public Health, 5, 258.
+
+[12]Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology. (1996). Heart rate variability: Standards of measurement, physiological interpretation and clinical use. Circulation, 93(5), 1043–1065.
