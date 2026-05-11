@@ -171,4 +171,78 @@ A continuación, se presentará el plan de acción que se implementará para abo
 </p>
 
 **PARTE A - B**
-Para esta parte del laboratorio se detallará el proceso para la adquisición de la señal ECG. Este paso incluye la selección de un sujeto de prueba, la grabación de la señal durante un período específico y la verificación de los parámetros técnicos adecuados, como la frecuencia de muestreo y los niveles de cuantificación.
+Adquisición de la señal ECG
+Lo primero que se hizo fue adquirir la señal atravez del bitalino luego de tener la señal se realizo un filtro IIR para filtrar a señal original.
+**Valores del filtro**
+<img width="449" height="148" alt="image" src="https://github.com/user-attachments/assets/688e83b8-0284-4635-9b14-7be54f96203c" />
+```python
+plt.figure(figsize=(15,4))
+
+plt.plot(t,
+         ecg_mV,
+         color='#C8A2FF')
+
+plt.title("ECG Original")
+
+plt.xlabel("Tiempo [s]")
+plt.ylabel("Amplitud [mV]")
+
+plt.grid()
+
+plt.show()
+
+# =========================================================
+# FILTRO IIR
+# =========================================================
+
+y = np.zeros(len(ecg_mV))
+
+for n in range(3, len(ecg_mV)):
+
+    y[n] = (
+        0.22 * ecg_mV[n]
+        + 0.66 * ecg_mV[n-1]
+        + 0.66 * ecg_mV[n-2]
+        + 0.22 * ecg_mV[n-3]
+        + 0.66 * y[n-1]
+        - 0.11 * y[n-2]
+    )
+
+# =========================================================
+# ECG FILTRADO
+# =========================================================
+
+plt.figure(figsize=(15,4))
+
+plt.plot(t,
+         ecg_mV,
+         label='Original',
+         alpha=0.4,
+         color='#D8BFD8')
+
+plt.plot(t,
+         y,
+         label='Filtrada',
+         color='#B57EDC',
+         linewidth=2)
+
+plt.title("ECG Filtrada")
+
+plt.xlabel("Tiempo [s]")
+plt.ylabel("Amplitud [mV]")
+
+plt.legend()
+
+plt.grid()
+
+plt.show()
+```
+**Resultado**
+<img width="1258" height="393" alt="image" src="https://github.com/user-attachments/assets/7ff244ad-e759-41b9-8a05-97105d470b16" />
+se hizo una comparacion entre la señal original y la filtrada teniendo como resultado:
+<img width="1258" height="394" alt="image" src="https://github.com/user-attachments/assets/74670f19-8767-469a-8dee-04d0dba62acb" />
+
+<h1 align="center"><i><b>𝐏𝐚𝐫𝐭𝐞 B 𝐝𝐞𝐥 𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐢𝐨</b></i></h1>
+
+
+
