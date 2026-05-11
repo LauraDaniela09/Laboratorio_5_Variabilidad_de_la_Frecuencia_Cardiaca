@@ -173,8 +173,11 @@ A continuación, se presentará el plan de acción que se implementará para abo
 **PARTE A - B**
 Adquisición de la señal ECG
 Lo primero que se hizo fue adquirir la señal atravez del bitalino luego de tener la señal se realizo un filtro IIR para filtrar a señal original.
+
 **Valores del filtro**
+
 <img width="449" height="148" alt="image" src="https://github.com/user-attachments/assets/688e83b8-0284-4635-9b14-7be54f96203c" />
+
 ```python
 plt.figure(figsize=(15,4))
 
@@ -244,5 +247,65 @@ se hizo una comparacion entre la señal original y la filtrada teniendo como res
 
 <h1 align="center"><i><b>𝐏𝐚𝐫𝐭𝐞 B 𝐝𝐞𝐥 𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐢𝐨</b></i></h1>
 
+teniendo la señal filtrada se corto en dos partes, la primera va del minuto 0 al minuto 2 el cual se concntra en que el paciente esta en completo silencio, sin movimiento.
 
+**Resultado**
+<img width="1258" height="393" alt="image" src="https://github.com/user-attachments/assets/12b28208-272a-446d-ab13-afdfd874040a" />
+
+```python
+muestras_2min = 120 * Fs
+
+reposo = y[:muestras_2min]
+
+lectura = y[muestras_2min:2*muestras_2min]
+
+# =========================================================
+# TIEMPOS
+# =========================================================
+
+t_reposo = np.arange(len(reposo))/Fs
+
+t_lectura = np.arange(len(lectura))/Fs
+
+# =========================================================
+# ECG REPOSO
+# =========================================================
+
+plt.figure(figsize=(15,4))
+
+plt.plot(t_reposo,
+         reposo,
+         color='#B57EDC')
+
+plt.title("ECG Filtrado - Reposo")
+
+plt.xlabel("Tiempo [s]")
+plt.ylabel("Amplitud [mV]")
+
+plt.grid()
+
+plt.show()
+```
+
+por otro lado esta del minuto 2 al minuto 4 que se encuentra en actividad, donde el paciente esta leyendo en voz alta durante los dos minutos.
+
+**Resultado**
+<img width="1258" height="393" alt="image" src="https://github.com/user-attachments/assets/8fde445e-99e8-4d27-8986-88d3ce83a2f6" />
+
+```python
+plt.figure(figsize=(15,4))
+
+plt.plot(t_lectura,
+         lectura,
+         color='#B57EDC')
+
+plt.title("ECG Filtrado - Lectura")
+
+plt.xlabel("Tiempo [s]")
+plt.ylabel("Amplitud [mV]")
+
+plt.grid()
+
+plt.show()
+```
 
