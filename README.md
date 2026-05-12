@@ -357,7 +357,7 @@ plt.show()
 ```
 A partir de la detección de los picos R se calcularon los intervalos R-R consecutivos, generando una nueva serie temporal correspondiente a la variabilidad de la frecuencia cardíaca (HRV). Esta señal permite analizar las fluctuaciones del ritmo cardíaco bajo diferentes condiciones fisiológicas.
 
-<img width="1242" height="393" alt="image" src="https://github.com/user-attachments/assets/2e2fab8c-caab-455f-9597-fb3b2942467a" />
+<img width="1263" height="393" alt="image" src="https://github.com/user-attachments/assets/3633a4c5-e1e4-48dc-aff9-635be63f586e" />
 
 **PICOS R EN ACTIVIDAD**
 
@@ -413,7 +413,8 @@ print("Media RR:", np.mean(rr_lectura), "s")
 
 print("SDNN:", np.std(rr_lectura), "s")
 ```
-<img width="1235" height="393" alt="image" src="https://github.com/user-attachments/assets/d80b81e5-d083-47da-979d-3ea731e67616" />
+<img width="1265" height="393" alt="image" src="https://github.com/user-attachments/assets/060a8f1c-8add-464a-88f7-c95dc24ef6ff" />
+
 <img width="386" height="204" alt="image" src="https://github.com/user-attachments/assets/88b335b1-cdc1-417b-9287-f93c0b834e1a" />
 
 La media de los intervalos R-R representa el tiempo promedio entre latidos cardíacos consecutivos, mientras que el parámetro SDNN corresponde a la desviación estándar de dichos intervalos y se utiliza como indicador de la variabilidad de la frecuencia cardíaca. Estos parámetros permiten evaluar la actividad del sistema nervioso autónomo bajo diferentes condiciones fisiológicas.
