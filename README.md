@@ -175,7 +175,9 @@ Adquisición de la señal ECG
 Lo primero que se hizo fue adquirir la señal atravez del bitalino luego de tener la señal se realizo un filtro IIR para filtrar a señal original.
 
 **Valores del filtro**
-
+$$
+y[n]=0.22x[n]+0.66x[n-1]+0.66x[n-2]+0.22x[n-3]+0.66y[n-1]-0.11y[n-2]
+$$
 <img width="449" height="148" alt="image" src="https://github.com/user-attachments/assets/688e83b8-0284-4635-9b14-7be54f96203c" />
 
 ```python
