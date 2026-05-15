@@ -254,7 +254,9 @@ se hizo una comparacion entre la señal original y la filtrada teniendo como res
 <img width="1258" height="394" alt="image" src="https://github.com/user-attachments/assets/74670f19-8767-469a-8dee-04d0dba62acb" />
 
 <h1 align="center"><i><b>𝐏𝐚𝐫𝐭𝐞 B 𝐝𝐞𝐥 𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐢𝐨</b></i></h1>
-
+<p align="center">
+<img width="1069" height="3936" alt="Tablero en blanco (1)" src="https://github.com/user-attachments/assets/1495c373-0ccb-40f0-8090-2517af5bea33" />
+</p>
 teniendo la señal filtrada se corto en dos partes, la primera va del minuto 0 al minuto 2 el cual se concntra en que el paciente esta en completo silencio, sin movimiento.
 
 **Resultado**
@@ -428,7 +430,9 @@ print("SDNN:", np.std(rr_lectura), "s")
 La media de los intervalos R-R representa el tiempo promedio entre latidos cardíacos consecutivos, mientras que el parámetro SDNN corresponde a la desviación estándar de dichos intervalos y se utiliza como indicador de la variabilidad de la frecuencia cardíaca. Estos parámetros permiten evaluar la actividad del sistema nervioso autónomo bajo diferentes condiciones fisiológicas.
 
 <h1 align="center"><i><b>𝐏𝐚𝐫𝐭𝐞 C 𝐝𝐞𝐥 𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐢𝐨</b></i></h1>
-
+<p align="center">
+<img width="631" height="802" alt="image" src="https://github.com/user-attachments/assets/f7f5c5d8-e318-4b6a-8d8f-f05afb5e3a2f" />
+</p>
  **Construcción del diagrama de Poincaré**
  
 Por ulimo ya teniendo los intervalos R-R se puede realizar el diagrama de poincaré tanto para la condición de reposo como para la condición de actividad (lectura). Cada punto del gráfico representa la relación entre dos intervalos cardíacos consecutivos.
