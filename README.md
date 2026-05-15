@@ -244,10 +244,10 @@ plt.grid()
 
 plt.show()
 ```
-Los coeficientes bk corresponden al numerador de la función de transferencia y afectan las muestras actuales y pasadas de la señal de entrada. Por otro lado, los coeficientes ak
-	​
+Los coeficientes bk corresponden al numerador de la función de transferencia y afectan las muestras actuales y pasadas de la señal de entrada.
 
- provienen del denominador y están asociados a las salidas anteriores del sistema, generando retroalimentación. A partir de estos coeficientes se obtuvo la ecuación en diferencias del filtro
+los coeficientes ak provienen del denominador y están asociados a las salidas anteriores del sistema, generando retroalimentación. A partir de estos coeficientes se obtuvo la ecuación en diferencias del filtro
+
 **Resultado**
 <img width="1258" height="393" alt="image" src="https://github.com/user-attachments/assets/7ff244ad-e759-41b9-8a05-97105d470b16" />
 se hizo una comparacion entre la señal original y la filtrada teniendo como resultado:
