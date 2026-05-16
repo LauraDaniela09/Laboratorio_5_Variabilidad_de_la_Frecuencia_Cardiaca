@@ -255,7 +255,7 @@ se hizo una comparacion entre la señal original y la filtrada teniendo como res
 
 <h1 align="center"><i><b>𝐏𝐚𝐫𝐭𝐞 B 𝐝𝐞𝐥 𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐢𝐨</b></i></h1>
 <p align="center">
-<img width="1069" height="3936" alt="Tablero en blanco (1)" src="https://github.com/user-attachments/assets/1495c373-0ccb-40f0-8090-2517af5bea33" />
+<img width="1024" height="1466" alt="image" src="https://github.com/user-attachments/assets/74defd92-3adc-4770-85ec-bb62b687d5fc" />
 </p>
 teniendo la señal filtrada se corto en dos partes, la primera va del minuto 0 al minuto 2 el cual se concntra en que el paciente esta en completo silencio, sin movimiento.
 
